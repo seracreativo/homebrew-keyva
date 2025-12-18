@@ -1,8 +1,8 @@
 class Keyva < Formula
   desc "Environment variables manager CLI - works with Keyva iOS/macOS app"
   homepage "https://github.com/seracreativo/keyva-cli"
-  url "https://github.com/seracreativo/keyva-cli/releases/download/v1.2.0/keyva-1.2.0.tar.gz"
-  sha256 "83b397a2e7a5944c414370559f9d1d4047fe3b4f43656dc064207ddc98224aaa"
+  url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.0/keyva-1.3.0.tar.gz"
+  sha256 "04ac145bcea880cba2b32b55cde37d2e538c19297a99a03735bc96d7d95ab8b9"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
