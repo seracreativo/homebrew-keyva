@@ -1,16 +1,22 @@
 class Keyva < Formula
   desc "Environment variables manager CLI - works with Keyva iOS/macOS app"
   homepage "https://github.com/seracreativo/keyva-cli"
-  url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.4/keyva-1.3.4.tar.gz"
-  sha256 "20dca6bfa0eca3775a64211aa1d3b46d115ba7e59bae419433d7743107ff861f"
+  version "1.3.5"
   license "MIT"
 
-  depends_on xcode: ["15.0", :build]
-  depends_on macos: :sonoma
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.5/keyva-1.3.5-arm64.tar.gz"
+      sha256 "3fcab6d913397336d2ffddedad6319c0a23022c5edb0cef6fc35f1c4399f7ddc"
+    else
+      # Intel Mac - will need to add this binary later
+      url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.5/keyva-1.3.5-x86_64.tar.gz"
+      sha256 "PLACEHOLDER_X86_SHA256"
+    end
+  end
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/keyva"
+    bin.install "keyva"
   end
 
   test do
