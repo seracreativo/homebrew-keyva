@@ -7,7 +7,7 @@ class Keyva < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.6/keyva-1.3.6-arm64.tar.gz"
-      sha256 "a376e1a5cf8b3133396e6f5fea0ab68395ceb69982c2d31ccc8ad000dc1205dc"
+      sha256 "5a0aa1795d36b1cb8f2066c54b02616a68fae7b7c39064c47c8125706f11777c"
     else
       # Intel Mac - will need to add this binary later
       url "https://github.com/seracreativo/keyva-cli/releases/download/v1.3.6/keyva-1.3.6-x86_64.tar.gz"
